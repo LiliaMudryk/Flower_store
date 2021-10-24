@@ -1,6 +1,6 @@
 package flowers;
 
-public class FlowerPack {
+public class FlowerPack extends Item{
     private int amount;
     private Flower flower;
     public FlowerPack(Flower flower,int amount){
@@ -9,5 +9,18 @@ public class FlowerPack {
     }
     public double getPrice(){
         return flower.getPrice()*amount;
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public Flower getFlower() {
+        return flower;
     }
 }
