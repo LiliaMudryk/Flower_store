@@ -18,14 +18,12 @@ class PostDeliveryStrategyTest {
     @BeforeEach
     void setUp() {
         delivery=new PostDeliveryStrategy();
-        flower = new Flower(FlowerType.ROSE,25, new int[]{1,2,3},7);
         List<Item> items = new ArrayList<>();
 
     }
 
     @Test
     void deliver() {
-        items.add(flower);
         assertTrue(delivery.deliver(items));
     }
 }
