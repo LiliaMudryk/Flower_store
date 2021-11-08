@@ -1,9 +1,11 @@
+package order;
+
 import delivery.Delivery;
 import flowers.Item;
 import payments.Payment;
+import users.User;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Order {
@@ -11,6 +13,7 @@ public class Order {
     Delivery delivery;
     private int totalPrice;
     List<Item> items = new ArrayList<>();
+    List<User> users = new ArrayList<User>();
 
     public void addItem(Item item){
         items.add(item);
@@ -48,5 +51,19 @@ public class Order {
         totalPrice = calculateTotalPrice();
         this.getDelivery().deliver(items);
         this.getPayment().pay(totalPrice);
+    }
+    public void addUser(User user){
+        users.add(user);
+    }
+    public void removeUser(User user){
+        users.remove(user);
+    }
+    public void notifyUsers(){
+        for (int i =0;i<users.size();i++) {
+            users.get(i).update("Your order is ready!");
+        }
+    }
+    public void order(){
+        notifyUsers();
     }
 }

@@ -1,10 +1,10 @@
+import order.Order;
 import decorators.BasketDecorator;
-import decorators.PaperDecorator;
-import delivery.DHLDeliveryStrategy;
-import delivery.Delivery;
 import delivery.PostDeliveryStrategy;
 import flowers.*;
 import payments.PayPalPaymentStrategy;
+import users.Reciever;
+import users.Sender;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +21,12 @@ public class Main {
         order.setDelivery(dhl);
         order.setPayment(new PayPalPaymentStrategy());
         order.processOrder();
+//        Reciever a = new Reciever();
+//        System.out.println((a.getId()));
+//        Reciever b = new Reciever();
+//        System.out.println((b.getId()));
+//        Sender c = new Sender();
+//        System.out.println((c.getId()));
+
     }
 }
