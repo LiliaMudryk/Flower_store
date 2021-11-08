@@ -12,4 +12,7 @@ public class ID {
     public static int uploadID(){
         return id++;
     }
+    public static void reset() {
+        ID.id = 0;
+    }
 }
