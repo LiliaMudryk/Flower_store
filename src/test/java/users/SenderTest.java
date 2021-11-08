@@ -13,6 +13,8 @@ class SenderTest {
         Reciever r1 = new Reciever();
         Sender s2 = new Sender();
         assertEquals(s2.getId(),2);
-
+        r1 = null;
+        s1=null;
+        s2=null;
     }
 }

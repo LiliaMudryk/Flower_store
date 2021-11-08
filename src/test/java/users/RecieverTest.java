@@ -14,6 +14,9 @@ class RecieverTest {
         Reciever r2 = new Reciever();
         assertEquals(r1.getId(),0);
         assertEquals(r2.getId(),2);
+        r1 = null;
+        r2=null;
+        s1=null;
     }
 
 }
