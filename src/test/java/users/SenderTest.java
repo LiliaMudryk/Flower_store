@@ -9,7 +9,7 @@ class SenderTest {
     @Test
     void getId() {
         Sender s1 = new Sender();
-        assertEquals(s1.getId(),3);
+        assertEquals(s1.getId(),0);
         Reciever r1 = new Reciever();
         Sender s2 = new Sender();
         assertEquals(s2.getId(),2);
